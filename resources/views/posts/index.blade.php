@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Posts</title>
-</head>
-<body>
-  Welcome
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+<div class="flex justify-center">
+  <div class="w-8/12 bg-white p-6 rounded-lg">
+    Posts
+  </div>
+</div>
+@endsection
