@@ -27,7 +27,7 @@
       @endguest
     </ul>
   </nav>
-  {{-- resume at 31:46 <br/>
+  {{-- resume at 49:00 <br/>
 
   https://www.youtube.com/watch?v=MFh0Fd7BsjE&t=1261s&ab_channel=TraversyMedia --}}
   
