@@ -17,15 +17,19 @@
     </ul>
 
     <ul class="flex items-center ">
-      <li><a class="p-3" href="">J. Nascimento</a></li>
-      <li><a class="p-3" href="">Login</a></li>
-      <li><a class="p-3" href="{{route('register')}}">Register</a></li>
-      <li><a class="p-3" href="">Logout</a></li>
+      @auth
+        <li><a class="p-3" href="">J. Nascimento</a></li>
+        <li><a class="p-3" href="">Logout</a></li>
+      @endauth
+      @guest
+        <li><a class="p-3" href="">Login</a></li>
+        <li><a class="p-3" href="{{route('register')}}">Register</a></li>
+      @endguest
     </ul>
   </nav>
-  resume at 31:46 <br/>
+  {{-- resume at 31:46 <br/>
 
-  https://www.youtube.com/watch?v=MFh0Fd7BsjE&t=1261s&ab_channel=TraversyMedia
+  https://www.youtube.com/watch?v=MFh0Fd7BsjE&t=1261s&ab_channel=TraversyMedia --}}
   
   @yield('content')
 </body>
