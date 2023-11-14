@@ -11,9 +11,9 @@
 
   <nav class="p-6 bg-white flex justify-between mb-6">
     <ul class="flex items-center ">
-      <li><a class="p-3" href="">Home</a></li>
-      <li><a class="p-3" href="">Dashboard</a></li>
-      <li><a class="p-3" href="">Post</a></li>
+      <li><a class="p-3" href="{{route('home')}}">Home</a></li>
+      <li><a class="p-3" href="{{route('dashboard')}}">Dashboard</a></li>
+      <li><a class="p-3" href="{{route('posts')}}">Posts</a></li>
     </ul>
 
     <ul class="flex items-center ">
@@ -32,7 +32,7 @@
       @endguest
     </ul>
   </nav>
-  {{-- resume at 49:00 <br/>
+  {{-- resume at 1:04:00 <br/>
 
   https://www.youtube.com/watch?v=MFh0Fd7BsjE&t=1261s&ab_channel=TraversyMedia --}}
   
