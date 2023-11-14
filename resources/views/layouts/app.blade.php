@@ -18,11 +18,16 @@
 
     <ul class="flex items-center ">
       @auth
-        <li><a class="p-3" href="">J. Nascimento</a></li>
-        <li><a class="p-3" href="">Logout</a></li>
+        <li><a class="p-3" href="">{{auth()->user()->username}}</a></li>
+        <li>
+          <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="p-3">Logout</button>
+          </form>
+        </li>
       @endauth
       @guest
-        <li><a class="p-3" href="">Login</a></li>
+        <li><a class="p-3" href="{{route('login')}}">Login</a></li>
         <li><a class="p-3" href="{{route('register')}}">Register</a></li>
       @endguest
     </ul>

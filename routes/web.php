@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\auth\LoginController;
+use App\Http\Controllers\auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
@@ -17,15 +18,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// authentication routes
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
+// application routes
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
+
