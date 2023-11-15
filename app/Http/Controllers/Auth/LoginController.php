@@ -25,7 +25,7 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-        if(!auth()->attempt($request->only('email', 'password')))
+        if(!auth()->attempt($request->only('email', 'password'), $request->remember))
         {
             // it will messup old props
             return back()->with('loginStatus', 'Invalid login credentials');
